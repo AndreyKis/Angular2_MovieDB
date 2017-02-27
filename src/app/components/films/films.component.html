@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<h2>Popular Films</h2>-->
+<!--<div class="container">-->
+<div class="col-md-12">
+    <!--<div *ngFor="let item of createRange(); let currentElIndex = index">-->
+
+    <div *ngFor="let film of films; let myIndex = index">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="row">
+                    <div class="panel-body flex-grow">
+                        <a class="fancyimage col-md-6" data-fancybox-group="group"
+                           href="http://image.tmdb.org/t/p/w185/{{film.poster_path}}">
+                            <img src="http://image.tmdb.org/t/p/w185/{{film.poster_path}}" alt=""
+                                 style="height: auto; width: auto; max-width: 100%; max-height: 100%;">
+                        </a>
+                        <div class="col-md-6" style="max-height: inherit">
+                            <h3>{{film.title}}</h3>
+                            <p style="max-height: inherit">{{film.overview}}</p>
+                            <a [routerLink]="['/detail', film.id]" style="text-align: left">Read More</a>
+                            <a style="text-align: left" (click)="addToFavourite(film.id)">Add to favourite</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--</div>-->
+<button class="btn btn-primary" (click)="nextPage()">More films</button>
