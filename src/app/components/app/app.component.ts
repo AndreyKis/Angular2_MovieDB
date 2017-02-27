@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {CoolLocalStorage} from "angular2-cool-storage";
 /**
  * Created by ankys on 25.02.2017.
  */
@@ -10,7 +11,8 @@ import {Component} from "@angular/core";
 export class AppComponent {
     title: string;
 
-    constructor() {
+    constructor(private localStorage: CoolLocalStorage) {
+        // localStorage.clear();
         this.title = 'My films';
     }
 }

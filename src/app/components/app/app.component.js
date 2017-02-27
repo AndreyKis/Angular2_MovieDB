@@ -9,11 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var angular2_cool_storage_1 = require("angular2-cool-storage");
 /**
  * Created by ankys on 25.02.2017.
  */
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(localStorage) {
+        this.localStorage = localStorage;
+        // localStorage.clear();
         this.title = 'My films';
     }
     AppComponent = __decorate([
@@ -22,7 +25,7 @@ var AppComponent = (function () {
             selector: 'my-app',
             templateUrl: 'app.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [angular2_cool_storage_1.CoolLocalStorage])
     ], AppComponent);
     return AppComponent;
 }());

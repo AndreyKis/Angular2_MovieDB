@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--<h2>Popular Films</h2>-->
-<!--<div class="container">-->
 <div class="col-md-12">
     <!--<div *ngFor="let item of createRange(); let currentElIndex = index">-->
 
@@ -19,8 +17,8 @@
                             <h3>{{film.title}}</h3>
                             <p style="max-height: inherit">{{film.overview}}</p>
                             <a [routerLink]="['/detail', film.id]" style="text-align: left">Read More</a>
-                            <button class="btn btn-default" (click)="addToFavourite(film.id)">
-                                <span class="glyphicon glyphicon-star-empty"></span>
+                            <button class="btn btn-default" (click)="removeFromFavourites(myIndex)">
+                                <span class="glyphicon glyphicon-remove"></span>
                             </button>
                         </div>
                     </div>
@@ -29,5 +27,3 @@
         </div>
     </div>
 </div>
-<!--</div>-->
-<button class="btn btn-primary" (click)="nextPage()">More films</button>

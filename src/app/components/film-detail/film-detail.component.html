@@ -2,9 +2,10 @@
 <html lang="en">
 <html>
 <body>
-<div *ngIf="film">
+<div *ngIf="film" style="color: white">
     <div [ngStyle]="{'background-image': 'url(' + 'http://image.tmdb.org/t/p/w650/' + film.backdrop_path + ')',
-             '-webkit-gradient': 'top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%', 'background-size': 'cover', 'background-repeat': 'no-repeat'}">
+             '-webkit-gradient': 'top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%',
+             'background-size': 'cover', 'background-repeat': 'no-repeat'}">
         <div class="row">
             <!--<div class="row">-->
             <div class="col-md-3">

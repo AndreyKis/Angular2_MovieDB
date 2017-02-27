@@ -22,23 +22,17 @@ var FavouriteFilmsComponent = (function () {
         this.route = route;
     }
     FavouriteFilmsComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        var array = JSON.parse(this.localStorage.getItem("favouriteFilms"));
-        this.route.params
-            .switchMap(function (params) { return _this.filmService.getFilmById(+params['id']); })
-            .subscribe(function (filmByName) {
-            if (!array) {
-                array = [];
-            }
-            array.push(filmByName);
-            _this.localStorage.setItem("favouriteFilms", JSON.stringify(array));
-        });
+        this.films = JSON.parse(this.localStorage.getItem("favouriteFilms"));
+    };
+    FavouriteFilmsComponent.prototype.removeFromFavourites = function (index) {
+        this.films.splice(index, 1);
+        this.localStorage.setItem("favouriteFilms", JSON.stringify(this.films));
     };
     FavouriteFilmsComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-films',
-            templateUrl: 'films.component.html',
+            templateUrl: 'favourite-films.component.html',
             styleUrls: ['films.component.css']
         }), 
         __metadata('design:paramtypes', [angular2_cool_storage_1.CoolLocalStorage, films_service_1.FilmService, router_1.ActivatedRoute])

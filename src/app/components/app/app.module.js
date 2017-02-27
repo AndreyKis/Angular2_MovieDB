@@ -15,7 +15,6 @@ var popular_films_component_1 = require("../films/popular-films.component");
 var film_detail_component_1 = require("../film-detail/film-detail.component");
 var films_service_1 = require("../films/films.service");
 var app_component_1 = require("./app.component");
-var dashboard_component_1 = require("../dashboard/dashboard.component");
 var app_routing_module_1 = require("./app-routing.module");
 var http_1 = require("@angular/http");
 var top_rated_films_component_1 = require("../films/top-rated-films.component");
@@ -39,7 +38,6 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                dashboard_component_1.DashBoardComponent,
                 popular_films_component_1.PopularFilmsComponent,
                 top_rated_films_component_1.TopRatedFilmsComponent,
                 film_detail_component_1.FilmDetailComponent,

@@ -5,7 +5,6 @@ import {PopularFilmsComponent} from "../films/popular-films.component";
 import {FilmDetailComponent} from "../film-detail/film-detail.component";
 import {FilmService} from "../films/films.service";
 import {AppComponent} from "./app.component";
-import {DashBoardComponent} from "../dashboard/dashboard.component";
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpModule} from "@angular/http";
 import {TopRatedFilmsComponent} from "../films/top-rated-films.component";
@@ -26,7 +25,6 @@ import {CoolStorageModule} from "angular2-cool-storage";
     ],
     declarations: [
         AppComponent,
-        DashBoardComponent,
         PopularFilmsComponent,
         TopRatedFilmsComponent,
         FilmDetailComponent,
